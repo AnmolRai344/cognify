@@ -1,0 +1,19 @@
+.hero {
+  height: 40vh;
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  animation: fadeIn 1.2s ease-in;
+}
+
+.card {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
