@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Task 2</title>
+  <style>
+    body { font-family: sans-serif; max-width: 400px; margin: 50px auto; }
+    input { display: block; margin: 10px 0; padding: 8px; width: 100%; }
+    .error { color: red; font-size: 14px; }
+  </style>
+</head>
+<body>
+  <form id="signupForm" action="/submit" method="POST">
+    <input name="username" placeholder="Username" required>
+    <input name="email" type="email" placeholder="Email" required>
+    <input name="age" type="number" placeholder="Age" required>
+    <span class="error" id="ageError"></span>
+    <button type="submit">Submit</button>
+  </form>
+
+  <script>
+    document.getElementById('signupForm').addEventListener('submit', (e) => {
+      const age = document.querySelector('[name="age"]').value;
+      if (age < 18) {
+        e.preventDefault();
+        document.getElementById('ageError').textContent = 'You must be 18+';
+      }
+    });
+  </script>
+</body>
+</html>
