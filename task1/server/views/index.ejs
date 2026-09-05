@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head><title>Task 1</title></head>
+<body>
+  <form action="/greet" method="POST">
+    <input name="username" placeholder="Enter your name" required>
+    <button type="submit">Submit</button>
+  </form>
+
+  <% if (name) { %>
+    <h2>Hello, <%= name %>!</h2>
+  <% } %>
+</body>
+</html>
